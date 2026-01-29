@@ -928,7 +928,7 @@
 <p><code>rotalabs-comply</code> provides a complete toolkit for ensuring AI systems meet regulatory compliance requirements. It offers:</p>
 <ul>
 <li><strong>Audit Logging</strong> -- Comprehensive logging of AI interactions with encryption, multiple storage backends (file, S3, memory), and configurable retention policies</li>
-<li><strong>Compliance Frameworks</strong> -- Built-in support for EU AI Act, SOC2 Type II, and HIPAA with extensible framework architecture</li>
+<li><strong>Compliance Frameworks</strong> -- Built-in support for EU AI Act, SOC2 Type II, HIPAA, GDPR, NIST AI RMF, ISO 42001, and MAS FEAT with extensible framework architecture</li>
 <li><strong>Privacy-First Design</strong> -- Hash-only mode for privacy-preserving audit trails, or encrypted content storage when full records are needed</li>
 <li><strong>Report Generation</strong> -- Automated compliance reports with executive summaries, risk assessments, and remediation recommendations</li>
 </ul>
@@ -946,7 +946,11 @@
 │   ├── base           # BaseFramework, ComplianceRule, ComplianceFramework
 │   ├── eu_ai_act      # EU AI Act (2024) compliance checks
 │   ├── soc2           # SOC2 Type II Trust Service Criteria
-│   └── hipaa          # HIPAA Security and Privacy Rules
+│   ├── hipaa          # HIPAA Security and Privacy Rules
+│   ├── gdpr           # GDPR data protection compliance
+│   ├── nist_ai_rmf    # NIST AI Risk Management Framework
+│   ├── iso_42001      # ISO/IEC 42001:2023 AI Management System
+│   └── mas            # MAS FEAT AI governance for financial services
 ├── reports/           # Report generation
 │   ├── generator      # ReportGenerator, ComplianceReport
 │   └── templates      # ReportTemplate, ReportSection, section generators
@@ -958,6 +962,7 @@
 <thead>
 <tr>
 <th>Framework</th>
+<th>Rules</th>
 <th>Description</th>
 <th>Categories</th>
 </tr>
@@ -965,18 +970,45 @@
 <tbody>
 <tr>
 <td><strong>EU AI Act</strong></td>
+<td>8</td>
 <td>European Union AI regulation (2024)</td>
 <td>Transparency, oversight, risk management, documentation, security</td>
 </tr>
 <tr>
 <td><strong>SOC2 Type II</strong></td>
+<td>10</td>
 <td>AICPA Trust Service Criteria</td>
 <td>Security, availability, processing integrity, confidentiality, privacy</td>
 </tr>
 <tr>
 <td><strong>HIPAA</strong></td>
+<td>8</td>
 <td>Health data protection (US)</td>
 <td>Access control, audit, integrity, authentication, transmission, privacy</td>
+</tr>
+<tr>
+<td><strong>GDPR</strong></td>
+<td>14</td>
+<td>EU General Data Protection Regulation</td>
+<td>Data protection, legal basis, consent, transparency, data subject rights, security, accountability</td>
+</tr>
+<tr>
+<td><strong>NIST AI RMF</strong></td>
+<td>15</td>
+<td>NIST AI Risk Management Framework 1.0</td>
+<td>Governance, context, risk identification, measurement, risk treatment</td>
+</tr>
+<tr>
+<td><strong>ISO/IEC 42001</strong></td>
+<td>23</td>
+<td>AI Management System standard (2023)</td>
+<td>Context, leadership, planning, support, operation, performance, improvement</td>
+</tr>
+<tr>
+<td><strong>MAS FEAT</strong></td>
+<td>18</td>
+<td>Singapore financial AI governance</td>
+<td>Fairness, ethics, accountability, transparency, model risk, data governance, operations</td>
 </tr>
 </tbody>
 </table>
